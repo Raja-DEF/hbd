@@ -1,0 +1,887 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday, My Love ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #eadfcf;
+    color: #493d35;
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: .18;
+    background-image:
+        radial-gradient(#8f806e 0.7px, transparent 0.7px);
+    background-size: 9px 9px;
+    z-index: 0;
+}
+
+/* =========================
+   MUSIC
+========================= */
+
+.music {
+    position: fixed;
+    right: 15px;
+    top: 15px;
+    z-index: 100;
+}
+
+.music label {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    background: #fffaf0;
+    box-shadow: 0 5px 18px rgba(70,50,35,.18);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* =========================
+   COVER
+========================= */
+
+.cover {
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.cover-paper {
+    width: 100%;
+    max-width: 650px;
+    min-height: 85vh;
+    background: #fffaf0;
+    padding: 45px 25px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 15px 45px rgba(70,50,35,.22);
+    transform: rotate(-1deg);
+}
+
+.tape {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background: rgba(211,177,143,.65);
+    top: -12px;
+}
+
+.tape.left {
+    left: 25px;
+    transform: rotate(-8deg);
+}
+
+.tape.right {
+    right: 25px;
+    transform: rotate(8deg);
+}
+
+.small-title {
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+    color: #9a7663;
+    margin-top: 35px;
+}
+
+.cover h1 {
+    font-family: "Caveat", cursive;
+    font-size: clamp(55px, 16vw, 100px);
+    line-height: .85;
+    margin: 20px 0;
+    color: #624d42;
+}
+
+.cover h2 {
+    font-family: "Caveat", cursive;
+    font-size: 36px;
+    color: #9c665e;
+}
+
+.cover-photo {
+    width: 210px;
+    height: 250px;
+    margin: 30px auto;
+    background: white;
+    padding: 10px 10px 35px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.16);
+    transform: rotate(3deg);
+}
+
+.cover-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.date {
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+    color: #766357;
+}
+
+.open {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 13px 28px;
+    border: 2px solid #80685a;
+    border-radius: 5px;
+    color: #59483e;
+    text-decoration: none;
+    font-family: "Caveat", cursive;
+    font-size: 22px;
+    transition: .3s;
+}
+
+.open:hover {
+    background: #80685a;
+    color: white;
+}
+
+/* =========================
+   GENERAL SECTION
+========================= */
+
+section {
+    position: relative;
+    z-index: 1;
+    padding: 75px 18px;
+}
+
+.paper {
+    max-width: 850px;
+    margin: auto;
+    background: #fffaf0;
+    padding: 35px 22px;
+    box-shadow: 0 12px 35px rgba(70,50,35,.18);
+    position: relative;
+}
+
+.section-title {
+    text-align: center;
+    font-family: "Caveat", cursive;
+    font-size: 48px;
+    color: #755b4e;
+    margin-bottom: 12px;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #8b796b;
+    margin-bottom: 35px;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+.letter {
+    max-width: 680px;
+    margin: auto;
+    padding: 35px 25px;
+    background:
+        linear-gradient(#fffdf7, #fff8ea);
+    border: 1px solid #e1d3bd;
+    position: relative;
+}
+
+.letter::before {
+    content: "♡";
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    font-size: 35px;
+    color: #b67d76;
+}
+
+.letter p {
+    font-family: "Caveat", cursive;
+    font-size: 25px;
+    line-height: 1.55;
+    margin-bottom: 18px;
+}
+
+.signature {
+    text-align: right;
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+/* =========================
+   SCRAPBOOK PHOTOS
+========================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px 20px;
+    max-width: 760px;
+    margin: auto;
+}
+
+.polaroid {
+    background: #fff;
+    padding: 9px 9px 35px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.16);
+    position: relative;
+}
+
+.polaroid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.polaroid p {
+    font-family: "Caveat", cursive;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 7px;
+}
+
+.rotate1 {
+    transform: rotate(-4deg);
+}
+
+.rotate2 {
+    transform: rotate(3deg);
+}
+
+.rotate3 {
+    transform: rotate(2deg);
+}
+
+.rotate4 {
+    transform: rotate(-3deg);
+}
+
+.rotate5 {
+    transform: rotate(-2deg);
+}
+
+.rotate6 {
+    transform: rotate(4deg);
+}
+
+/* =========================
+   STORY
+========================= */
+
+.story {
+    display: grid;
+    gap: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.note {
+    padding: 25px;
+    background: #f4e6c9;
+    box-shadow: 3px 6px 12px rgba(70,50,35,.12);
+    font-family: "Caveat", cursive;
+    font-size: 24px;
+    line-height: 1.45;
+}
+
+.note:nth-child(even) {
+    background: #eee0d7;
+    transform: rotate(1deg);
+}
+
+.note:nth-child(odd) {
+    transform: rotate(-1deg);
+}
+
+/* =========================
+   REASONS
+========================= */
+
+.reasons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.reason {
+    padding: 25px 15px;
+    background: #f7edda;
+    text-align: center;
+    border: 1px dashed #bca58c;
+}
+
+.reason span {
+    font-size: 30px;
+}
+
+.reason p {
+    margin-top: 8px;
+    font-family: "Caveat", cursive;
+    font-size: 22px;
+}
+
+/* =========================
+   WISHES
+========================= */
+
+.wishes {
+    max-width: 680px;
+    margin: auto;
+    padding: 30px;
+    background: #f2e2d4;
+    transform: rotate(-1deg);
+}
+
+.wishes p {
+    font-family: "Caveat", cursive;
+    font-size: 27px;
+    line-height: 1.55;
+    text-align: center;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.final-paper {
+    max-width: 650px;
+    padding: 50px 25px;
+    background: #fffaf0;
+    box-shadow: 0 15px 45px rgba(70,50,35,.22);
+}
+
+.final h2 {
+    font-family: "Caveat", cursive;
+    font-size: 55px;
+    color: #805a53;
+}
+
+.final p {
+    font-family: "Caveat", cursive;
+    font-size: 27px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.heart {
+    font-size: 55px;
+    margin-top: 25px;
+    animation: beat 1.3s infinite;
+}
+
+@keyframes beat {
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.18);
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 30px 15px 50px;
+    font-family: "Caveat", cursive;
+    font-size: 21px;
+    color: #78685c;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .cover {
+        padding: 18px 12px;
+    }
+
+    .cover-paper {
+        min-height: 92vh;
+        padding: 40px 18px;
+    }
+
+    .cover h1 {
+        font-size: 65px;
+    }
+
+    .cover h2 {
+        font-size: 30px;
+    }
+
+    .cover-photo {
+        width: 175px;
+        height: 215px;
+    }
+
+    section {
+        padding: 55px 12px;
+    }
+
+    .paper {
+        padding: 28px 14px;
+    }
+
+    .section-title {
+        font-size: 42px;
+    }
+
+    .letter {
+        padding: 25px 18px;
+    }
+
+    .letter p {
+        font-size: 22px;
+    }
+
+    .gallery {
+        gap: 28px 12px;
+    }
+
+    .polaroid {
+        padding: 7px 7px 28px;
+    }
+
+    .polaroid p {
+        font-size: 19px;
+    }
+
+    .reasons {
+        gap: 12px;
+    }
+
+    .reason {
+        padding: 20px 8px;
+    }
+
+    .reason p {
+        font-size: 19px;
+    }
+
+    .wishes p {
+        font-size: 23px;
+    }
+
+    .final h2 {
+        font-size: 45px;
+    }
+
+    .final p {
+        font-size: 23px;
+    }
+
+    .music {
+        right: 10px;
+        top: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<div class="music">
+    <label>
+        🎵
+        <span>Musik</span>
+        <audio controls>
+            <source src="lagu.mp3" type="audio/mpeg">
+        </audio>
+    </label>
+</div>
+
+<!-- =========================
+     COVER
+========================= -->
+
+<header class="cover" id="home">
+
+    <div class="cover-paper">
+
+        <div class="tape left"></div>
+        <div class="tape right"></div>
+
+        <div class="small-title">
+            A Little Scrapbook For
+        </div>
+
+        <h1>
+            Happy<br>
+            Birthday
+        </h1>
+
+        <h2>
+            My Favorite Person ♡
+        </h2>
+
+        <div class="cover-photo">
+            <img src="foto.jpg" alt="Foto kenangan">
+        </div>
+
+        <div class="date">
+            — 21 • 12 • 2026 —
+        </div>
+
+        <a href="#letter" class="open">
+            Open My Letter ♡
+        </a>
+
+    </div>
+
+</header>
+
+<!-- =========================
+     LETTER
+========================= -->
+
+<section id="letter">
+
+    <div class="paper">
+
+        <h2 class="section-title">
+            Dear You...
+        </h2>
+
+        <p class="section-subtitle">
+            Ada sedikit kata yang ingin raja sampaikan hari ini.
+        </p>
+
+        <div class="letter">
+
+            <p>
+                Happy birthday, sayangku. ♡
+            </p>
+
+            <p>
+                Hari ini adalah hari spesial karena seseorang
+                yang begitu berarti dalam hidup raja bertambah satu
+                tahun lagi dalam perjalanan hidupnya.
+            </p>
+
+            <p>
+                Raja mungkin tidak selalu bisa memberikan sesuatu
+                yang sempurna, tapi raja ingin bita tahu bahwa
+                kehadiran bita adalah salah satu hal paling berharga
+                yang pernah raja miliki.
+            </p>
+
+            <p>
+                Terima kasih karena sudah hadir, bertahan,
+                tertawa bersama raja, dan menjadi bagian dari
+                begitu banyak cerita yang sampai sekarang
+                masih ingin raja simpan.
+            </p>
+
+            <p>
+                Semoga di umur bita yang baru ini, bita selalu disertai dengan
+                banyak kebahagiaan, kesehatan, keberanian,
+                dan semua hal baik yang bita impikan.
+            </p>
+
+            <div class="signature">
+                With love,<br>
+                Someone who loves you ♡
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     MEMORIES
+========================= -->
+
+<section>
+
+    <div class="paper">
+
+        <h2 class="section-title">
+            Our Little Memories
+        </h2>
+
+        <p class="section-subtitle">
+            Beberapa potongan kecil dari cerita kita.
+        </p>
+
+        <div class="gallery">
+
+            <div class="polaroid rotate1">
+                <img src="foto1.jpg" alt="Memory 1">
+                <p>Our first memory ♡</p>
+            </div>
+
+            <div class="polaroid rotate2">
+                <img src="foto2.jpg" alt="Memory 2">
+                <p>One of my favorite days</p>
+            </div>
+
+            <div class="polaroid rotate3">
+                <img src="foto3.jpg" alt="Memory 3">
+                <p>That beautiful moment</p>
+            </div>
+
+            <div class="polaroid rotate4">
+                <img src="foto4.jpg" alt="Memory 4">
+                <p>Always worth remembering</p>
+            </div>
+
+            <div class="polaroid rotate5">
+                <img src="foto5.jpg" alt="Memory 5">
+                <p>A little piece of us</p>
+            </div>
+
+            <div class="polaroid rotate6">
+                <img src="foto6.jpg" alt="Memory 6">
+                <p>And hopefully many more ♡</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     STORY
+========================= -->
+
+<section>
+
+    <div class="paper">
+
+        <h2 class="section-title">
+            Our Little Story
+        </h2>
+
+        <p class="section-subtitle">
+            Karena setiap hubungan punya cerita yang layak disimpan.
+        </p>
+
+        <div class="story">
+
+            <div class="note">
+                ✎
+                Dari sekian banyak orang yang bisa hadir
+                dalam hidup raja, entah bagaimana akhirnya
+                bita yang menjadi satu satunya orang paling
+                berarti.
+            </div>
+
+            <div class="note">
+                ♡
+                Kita mungkin tidak selalu punya hari yang
+                sempurna. Tapi justru dari hari-hari sulit
+                itulah raja berharap kita bisa belajar untuk saling memahami dan menurunkan ego kita.
+            </div>
+
+            <div class="note">
+                ✿
+                Ada banyak hal kecil tentang bita yang mungkin
+                tidak bita sadari, tapi justru hal-hal kecil
+                itu yang membuat bita begitu spesial bagi laja.
+            </div>
+
+            <div class="note">
+                ♡
+                Kalau suatu hari nanti kita melihat kembali
+                semua foto dan cerita ini, semoga kita bisa
+                tersenyum dan berkata:
+                "Ternyata kita sudah sejauh ini ya."
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     REASONS
+========================= -->
+
+<section>
+
+    <div class="paper">
+
+        <h2 class="section-title">
+            Things I Love About You
+        </h2>
+
+        <p class="section-subtitle">
+            Bukan cuma satu alasan.
+        </p>
+
+        <div class="reasons">
+
+            <div class="reason">
+                <span>♡</span>
+                <p>Senyum bita yang selalu berhasil membuat hari raja lebih baik dan tenang seperti bulan sabit.</p>
+            </div>
+
+            <div class="reason">
+                <span>✿</span>
+                <p>Cara bita menjadi diri bita sendiri tanpa harus berpura-pura lagi seperti dulu.</p>
+            </div>
+
+            <div class="reason">
+                <span>☁</span>
+                <p>Hal-hal kecil yang bita lakukan tanpa bita sadari.</p>
+            </div>
+
+            <div class="reason">
+                <span>♡</span>
+                <p>Karena bersama bita, hal sederhana terasa lebih berarti bagi raja.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     WISHES
+========================= -->
+
+<section>
+
+    <div class="paper">
+
+        <h2 class="section-title">
+            My Wishes For You
+        </h2>
+
+        <div class="wishes">
+
+            <p>
+                Semoga langkah bita selalu dipermudah.
+                <br><br>
+
+                Semoga semua impian yang sedang bita perjuangkan
+                tercapai.
+                <br><br>
+
+                Semoga bita selalu dikelilingi orang-orang
+                yang benar-benar menyayangi bita.
+                <br><br>
+
+                Semoga laja selalu jadi alasan untuk bita tersenyum,
+                bahkan ketika hari sedang tidak berjalan sesuai
+                keinginan bita.
+                <br><br>
+
+                Dan semoga raja masih bisa menjadi bagian penting
+                dari perjalanan panjang bita selamanya. ♡
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="final">
+
+    <div class="final-paper">
+
+        <h2>
+            Once Again...
+        </h2>
+
+        <p>
+            Happy Birthday, my love. ♡
+        </p>
+
+        <p>
+            Terima kasih sudah menjadi bagian
+             penting dari cerita hidup raja.
+        </p>
+
+        <p>
+            Semoga hari ini menjadi awal dari
+            satu tahun yang jauh lebih indah
+            untuk bita.
+        </p>
+
+        <div class="heart">
+            ❤️
+        </div>
+
+        <p>
+            Keep smiling.<br>
+            Keep dreaming.<br>
+            And keep being you.
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+    Made with love ♡
+    <br>
+    Just for you.
+</footer>
+
+</body>
+</html>
+```
